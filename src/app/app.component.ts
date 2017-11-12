@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import {CuServersService} from './zaralot/services/cu-servers.service';
+import {CuServerInfo} from './zaralot/entities/cu-server-info';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'zaralot-root',
+  template: `
+<router-outlet></router-outlet>
+`,
+  styleUrls: []
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Zaralot';
+
+
+  constructor() {
+  }
 }

@@ -14,7 +14,7 @@ export class CuServersService {
   }
 
   getCuServerInfo(): Observable<Array<CuServerInfo>> {
-    return this.http.get(CU_SERVERS_ENDPOINT).map((list: any[]) => {
+    return this.http.get<Array<CuServerInfo>>(CU_SERVERS_ENDPOINT).map((list: any[]) => {
       return list.map(item => {
         return {
           name: item.name,

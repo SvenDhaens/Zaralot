@@ -3,10 +3,10 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'zaralot-nav-bar',
   template: `
-  <nav >
+<nav >
   <ul class="nav justify-content-center">
     <li class="nav-item" *ngFor="let link of navLinks">
-      <a class="nav-link active" [href]="link.url" [innerHtml]="link.name" [class.disabled]="link.disabled"></a>
+      <a class="nav-link active" [routerLink]="link.route" [innerHtml]="link.name" [routerLinkActive]="link.status"></a>
     </li>
   </ul>
 </nav>
@@ -15,18 +15,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavComponent implements OnInit {
   navLinks = [{
-    url: '#',
+    route: '',
     name: 'Home',
+    status: 'active'
   }, {
-    url: '/at-home/form',
-    name: '@-home.form'
+    route: '/at-home/form',
+    name: '@-home.form',
+    status: 'active'
   }, {
-    url: '/at-home',
-    name: '@-home'
-  }, {
-    url: '#',
-    name: 'Disabled',
-    disabled: true
+    route: '/at-home',
+    name: '@-home',
+    status: 'active'
   }];
 
   constructor() {

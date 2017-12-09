@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import {CuServersService} from './zaralot/services/cu-servers.service';
-import {CuServerInfo} from './zaralot/entities/cu-server-info';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'zaralot-root',
@@ -11,7 +9,6 @@ import {CuServerInfo} from './zaralot/entities/cu-server-info';
 })
 export class AppComponent {
   title = 'Zaralot';
-
 
   constructor() {
   }
